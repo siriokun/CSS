@@ -14,8 +14,8 @@
         <br>
         <br>
       </header>
-      <p>Dalam membuat website diperlukan sebuah mekansme dalam mengatur tampilan dari HTML
-        <label class="footnote-label" data-footnote-count="1"></label> <span class="footnote" data-footnote-count="1">HyperText Markup Language</span> had feelings, just like I did. Why deny them? Why would God resurrect people but not dogs? This core belief in human exceptionalism did not make any sense to me. Whatever consciousness and mind are and no matter how they relate to the brain and the rest of the body, I felt that the same principle must hold for people and dogs and, by extension, for other animals as well.</p>
+      <p>Dalam membuat website diperlukan sebuah mekanisme dalam mengatur tampilan dari HTML
+        <label class="footnote-label" data-footnote-count="1"></label> <span class="footnote" data-footnote-count="1">HyperText Markup Language</span> ipsum dolor sit amet, consectetur adipisicing elit. Similique vitae ab amet consectetur nemo unde accusantium aliquam quibusdam modi repudiandae, repellat commodi necessitatibus quidem saepe natus at quod suscipit inventore.</p>
       <blockquote>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, culpa omnis obcaecati ea id. Labore
           <label class="footnote-label" data-footnote-count="2"></label> <span class="footnote" data-footnote-count="2">Some footnote description</span> facilis ea rerum alias veritatis fugiat quo ut aliquid, reiciendis, ipsam quas, recusandae asperiores voluptate.</p>
@@ -35,9 +35,15 @@
       </dl>
       <dl>
         <dt><a href="#mengenal-css">3. Mengenal CSS</a></dt>
-        <dd><a href="#cara-kerja-css">3.1. Cara Kerja CSS</a></dd>
-        <dd><a href="#style-default-html">3.2. Style Default HTML</a></dd>
+        <dd><a href="#cara-kerja-css">3.1. Cara kerja CSS</a></dd>
+        <dd><a href="#style-default-html">3.2. Style default HTML</a></dd>
         <dd><a href="#browser-inspector">3.3. Browser Inspector</a></dd>
+      </dl>
+      <dl>
+        <dt><a href="#mengenal-css">4. Menyusun struktur data dengan HTML</a></dt>
+        <dd><a href="#cara-kerja-css">4.1. Klasifikasi tag-tag HTML</a></dd>
+        <dd><a href="#style-default-html">4.2. Orientasi penyusunan data</a></dd>
+        <dd><a href="#browser-inspector">4.3. Semantic dan penyederhanaan struktur data</a></dd>
       </dl>
     </section>
     <section id="mengenal-css">
@@ -48,6 +54,7 @@
       <p>Aliquid mollitia soluta facilis unde sint ex explicabo amet, iusto enim sunt quia animi non vero blanditiis assumenda sit qui, iste officia excepturi temporibus id magnam labore perferendis ut. Sapiente!</p>
       <p>Ratione optio itaque earum quasi eaque doloribus, beatae sequi. Voluptate nulla reiciendis distinctio ipsa non necessitatibus aperiam, architecto labore cumque odio quis, dolorem, aspernatur aliquid. Consequuntur corporis nam perferendis, fuga.</p>
       <p>Mollitia reiciendis veniam sequi tenetur rem sed accusantium nulla magnam, magni quibusdam culpa possimus! Molestias aliquid earum possimus voluptatem eveniet eligendi dolorum rem dolores minus dolor incidunt enim, qui labore.</p>
+      <h2>Some topic to be covered</h2>
       <p>Harum dolores reiciendis consectetur commodi molestiae laudantium asperiores quidem facere ipsa fugit, magnam officia illum quos sed voluptate veritatis! Animi architecto reprehenderit eveniet hic beatae, id tempora ducimus accusantium natus.</p>
       <p>Unde incidunt, pariatur assumenda maiores voluptatem odit cumque tempore fuga laborum possimus natus doloribus iste ea quo in harum? Nihil vitae quod, numquam eius in ut. Praesentium voluptates accusamus est.</p>
     </section>
@@ -56,3 +63,24 @@
     </section>
   </article>
 </main>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>
+$(function() {
+  $('.footnote-label').click(function() {
+    $(this).next().toggleClass('display');
+  });
+
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
