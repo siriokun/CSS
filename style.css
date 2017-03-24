@@ -1,0 +1,155 @@
+@import 'https://fonts.googleapis.com/css?family=Libre+Baskerville|Lato:400,400i,700,700i|Neuton:400,400i,700';
+body {
+  background-color: #fffdf2;
+  color: #444;
+  font-size: 1.6em;
+}
+body, blockquote {
+  font-family: 'Neuton', 'Georgia', serif;
+}
+h1, h2, h3 {
+  font-family: 'Libre Baskerville', 'Georgia', serif;
+}
+h3 {
+  font-family: 'Lato', Arial, sans-serif;
+}
+a {
+  color: #2196f3;
+}
+a:visited {
+  color: #3f51b5;
+}
+::selection, a::selection {
+  background: #f4ff62;
+  text-shadow: none;
+}
+article {
+  font-size: 0.9333333333rem;
+  line-height: 2.1rem;
+  width: 80%;
+  position: relative;
+  margin: 0 auto 7.0875rem;
+}
+@media (min-width: 30em) {
+  article {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 48em) {
+  article {
+    width: 75%;
+    max-width: 25em;
+    margin: 0 auto 15.946875rem;
+  }
+}
+@media (min-width: 71.25em) {
+  article {
+    margin-right: 15%;
+    width: 30.357142857em;
+    max-width: none;
+  }
+}
+@media (min-width: 80em) {
+  article {
+    margin: 0 auto 15.946875rem;
+    float: none;
+  }
+}
+article a {
+  text-decoration: none;
+  background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#444, #444);
+  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+  background-position: 0% 99%, 100% 99%, 0% 99%;
+}
+section {
+  padding-top: 15.946875rem;
+}
+@media (min-width: 30em) {
+  section {
+    padding-top: 7.946875rem;
+  }
+}
+dd {
+  margin-left: 1.5em;
+}
+p {
+  font-size: 1.4rem;
+  vertical-align: baseline;
+  margin: 1.4rem 0 1.4rem;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+h1, h2, h3 {
+  width: 80%;
+  font-weight: 600;
+}
+h1 {
+  font-size: 3.15rem;
+  line-height: 3.15rem;
+  margin: 0.6222222222rem 0 2.1rem;
+  font-weight: 500;
+}
+@media (min-width: 38.75em) {
+  h1 {
+    font-size: 3.15rem;
+  }
+}
+@media (min-width: 48em) {
+  h1 {
+    font-size: 4.725rem;
+    line-height: 4.725rem;
+  }
+}
+h2 {
+  font-size: 1.4rem;
+  margin: 4.725rem 0 1.4rem;
+  letter-spacing: 0.06em;
+  line-height: 2.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+@media (min-width: 48em) {
+  h2 {
+    font-size: 2.1rem;
+    line-height: 3.15rem;
+  }
+}
+h2::after {
+  height: 0;
+  content: "";
+  width: 4.725rem;
+  border-top: #fdd78c dotted 0.1229080933rem;
+  display: block;
+  margin: 0.9333333333rem 0 0;
+}
+h3 {
+  font-size: 1.4rem;
+  margin: 4.725rem 0 1.4rem;
+  letter-spacing: 0.05em;
+  line-height: 2.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+blockquote {
+  margin: 1.4rem 0 2.1rem;
+  padding-left: 2.1rem;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  border-left: #2196f3 solid 0.2rem;
+}
+@media (min-width: 61.25em) {
+  blockquote {
+    margin: 1.4rem 2.1rem 2.1rem 0;
+  }
+}
+blockquote p {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+blockquote footer {
+  font-size: 0.9333333333rem;
+  font-style: normal;
+}
