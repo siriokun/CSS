@@ -23,7 +23,7 @@
         CSS = Mengatur tata letak tampilan data di HTML</p>
       </blockquote>
       <p>Penggunaan HTML saat ini telah disederhanakan sehingga tidak memerlukan status Document Type (Doctype) karena pada dasarnya browser senantiasa memperbarui <em>rendering engine</em>-nya agar mendukung teknologi HTML terbaru. Bahkan kita dapat langsung menggunakan syntax HTML tanpa tag <em>html-head-body</em>. Saat ini HTML terbaru adalah HTML5 yang memiliki fungsi tidak hanya seputar penyusunan data namun juga bisa mengakses fitur mobile device, offline storage, 3D dan multimedia serta membuat pengalaman mengakses website lebih interaktif.</p>
-      <p></p>
+      <p>Meskipun styling pada CSS bergantung pada struktur HTML yang dibuat, namun kita dapat meningkatkan efisiensi dengan mengandalkan sifat <em>inheritance</em> (style turunan yang dapat diubah dan ditambahkan) pada hirarki <em>selector</em>. Dengan mengetahui bagaimana <a href="#cara-kerja-css">cara kerja CSS</a> maka kita dapat meminimalisir <em>DOM Tree</em>, sehingga browser me-render CSS dengan lebih cepat.</p>
     </section>
     <section id="daftar-isi">
       <header>
@@ -54,36 +54,24 @@
         <dd><a href="#grid">5.3. Grid</a></dd>
         <dd><a href="#animasi">5.4. Animasi</a></dd>
       </dl>
+      <dl>
+        <dt><a href="#klasifikasi-aturan-css">6. Responsive Layout</a></dt>
+        <dd><a href="#tipografi">6.1. Konsep Mobile First</a></dd>
+        <dd><a href="#whitspace">6.2. Konsep Progressive Enhancement</a></dd>
+        <dd><a href="#grid">6.3. Media Queries VS Fluid Layout VS Feature Queries</a></dd>
+      </dl>
     </section>
     <section id="mengenal-css">
       <header>
         <h1>Mengenal CSS</h1>
       </header>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora natus saepe, dolores enim cum veniam soluta, molestiae ad cumque optio fugit, et nostrum qui velit expedita, iure odit incidunt doloribus?</p>
-      <p>Aliquid mollitia soluta facilis unde sint ex explicabo amet, iusto enim sunt quia animi non vero blanditiis assumenda sit qui, iste officia excepturi temporibus id magnam labore perferendis ut. Sapiente!</p>
-      <p>Ratione optio itaque earum quasi eaque doloribus, beatae sequi. Voluptate nulla reiciendis distinctio ipsa non necessitatibus aperiam, architecto labore cumque odio quis, dolorem, aspernatur aliquid. Consequuntur corporis nam perferendis, fuga.</p>
-      <p>Mollitia reiciendis veniam sequi tenetur rem sed accusantium nulla magnam, magni quibusdam culpa possimus! Molestias aliquid earum possimus voluptatem eveniet eligendi dolorum rem dolores minus dolor incidunt enim, qui labore.</p>
+      <p>CSS akronim dari Cascading Style Sheets. Konsep Cascade dapat diartikan menggantikan aturan sebelumnya, dalam hal ini style yang berbeda dapat diterapkan pada satu selector secara berurut dari selector kurang spesifik hingga selector yang lebih spesifik sampai akhir style yang diinginkan.</p>
       <h2 id="cara-kerja-css">Cara kerja CSS</h2>
       <p>Agar CSS dapat berfungsi harus terdiri dari <em>selector</em>, <em>property</em> &amp; <em>value</em>.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora natus saepe, dolores enim cum veniam soluta, molestiae ad cumque optio fugit, et nostrum qui velit expedita, iure odit incidunt doloribus?</p>
-      <p>Aliquid mollitia soluta facilis unde sint ex explicabo amet, iusto enim sunt quia animi non vero blanditiis assumenda sit qui, iste officia excepturi temporibus id magnam labore perferendis ut. Sapiente!</p>
-      <p>Ratione optio itaque earum quasi eaque doloribus, beatae sequi. Voluptate nulla reiciendis distinctio ipsa non necessitatibus aperiam, architecto labore cumque odio quis, dolorem, aspernatur aliquid. Consequuntur corporis nam perferendis, fuga.</p>
-      <p>Mollitia reiciendis veniam sequi tenetur rem sed accusantium nulla magnam, magni quibusdam culpa possimus! Molestias aliquid earum possimus voluptatem eveniet eligendi dolorum rem dolores minus dolor incidunt enim, qui labore.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora natus saepe, dolores enim cum veniam soluta, molestiae ad cumque optio fugit, et nostrum qui velit expedita, iure odit incidunt doloribus?</p>
-      <p>Aliquid mollitia soluta facilis unde sint ex explicabo amet, iusto enim sunt quia animi non vero blanditiis assumenda sit qui, iste officia excepturi temporibus id magnam labore perferendis ut. Sapiente!</p>
-      <p>Ratione optio itaque earum quasi eaque doloribus, beatae sequi. Voluptate nulla reiciendis distinctio ipsa non necessitatibus aperiam, architecto labore cumque odio quis, dolorem, aspernatur aliquid. Consequuntur corporis nam perferendis, fuga.</p>
-      <p>Mollitia reiciendis veniam sequi tenetur rem sed accusantium nulla magnam, magni quibusdam culpa possimus! Molestias aliquid earum possimus voluptatem eveniet eligendi dolorum rem dolores minus dolor incidunt enim, qui labore.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora natus saepe, dolores enim cum veniam soluta, molestiae ad cumque optio fugit, et nostrum qui velit expedita, iure odit incidunt doloribus?</p>
-      <p>Aliquid mollitia soluta facilis unde sint ex explicabo amet, iusto enim sunt quia animi non vero blanditiis assumenda sit qui, iste officia excepturi temporibus id magnam labore perferendis ut. Sapiente!</p>
-      <p>Ratione optio itaque earum quasi eaque doloribus, beatae sequi. Voluptate nulla reiciendis distinctio ipsa non necessitatibus aperiam, architecto labore cumque odio quis, dolorem, aspernatur aliquid. Consequuntur corporis nam perferendis, fuga.</p>
-      <p>Mollitia reiciendis veniam sequi tenetur rem sed accusantium nulla magnam, magni quibusdam culpa possimus! Molestias aliquid earum possimus voluptatem eveniet eligendi dolorum rem dolores minus dolor incidunt enim, qui labore.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora natus saepe, dolores enim cum veniam soluta, molestiae ad cumque optio fugit, et nostrum qui velit expedita, iure odit incidunt doloribus?</p>
-      <p>Aliquid mollitia soluta facilis unde sint ex explicabo amet, iusto enim sunt quia animi non vero blanditiis assumenda sit qui, iste officia excepturi temporibus id magnam labore perferendis ut. Sapiente!</p>
-      <p>Ratione optio itaque earum quasi eaque doloribus, beatae sequi. Voluptate nulla reiciendis distinctio ipsa non necessitatibus aperiam, architecto labore cumque odio quis, dolorem, aspernatur aliquid. Consequuntur corporis nam perferendis, fuga.</p>
-      <p>Mollitia reiciendis veniam sequi tenetur rem sed accusantium nulla magnam, magni quibusdam culpa possimus! Molestias aliquid earum possimus voluptatem eveniet eligendi dolorum rem dolores minus dolor incidunt enim, qui labore.</p>
+      <p>CSS bekerja dengan menelusuri selector-selector dari kanan ke kiri, dari dalam ke luar.</p>
     </section>
     <section id="penutup">
-      <em>This is not the end..</em>
+      <em>This is just the beginning..</em>
     </section>
   </article>
 </main>
